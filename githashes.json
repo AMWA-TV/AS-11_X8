@@ -2,7 +2,7 @@
     "githashes": [
         {
             "repo_url": "git@gitlab.com:mglanville/amwa-specs.git", 
-            "commit": "364ee8b22f8a3a2198d70174a1818ae09e3f1e26"
+            "commit": "ec57aad16eae39971d00512532fe081d1a8c8692"
         }, 
         {
             "repo_url": "git@gitlab.com:thomas.heritage/rules-processor.git", 
