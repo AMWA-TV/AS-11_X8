@@ -1,4 +1,4 @@
-# **[Work In Progress]** AS-11 X8 (MXF Program Contribution - NABA HD (MPEG-2))
+# **[Work In Progress]** AS-11 X8 (MXF Program Contribution - NABA DPP HD (MPEG-2))
 
 _This file is one rendering / view of this AMWA Specification and is a part of the Specification repository. Visit the AMWA [web page for this Specification](http://amwa.tv/projects/AS-11-X8.shtml) which has information about revisions and current development._
 
@@ -12,7 +12,7 @@ The AMWA AS-11 Specifications define constrained media file formats for the deli
 
 ## Aims
 
-This Specification aims to define a file format for the delivery of finished HD TV Programmes with inter-coded ("Long GOP") MPEG-2 picture essence. It aims to define:
+This Specification aims to define a file format for the delivery of finished HD TV Programmes (MPEG-2) to [North American Broadcasters Association](http://www.nabanet.com/) (NABA) broadcasters. It aims to define:
 
 * a vendor-neutral and broadcaster-neutral package, using open technologies for delivery of finished programming from program producers and program distributors to broadcast stations
 * a package that is sufficiently simple so as to limit the scope for interoperability problems
