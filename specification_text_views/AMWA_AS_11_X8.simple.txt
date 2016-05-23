@@ -343,11 +343,11 @@ There are two special types of Block which allow the value of one Block to be se
                 [N] Implementation Notes
                     [A] # DID and SDID values
                         
-                        VANC Data Packets that are carrying Caption Distribution Packets will have a DID value of 61h and a SDID value of 01h.
+                        <VANC Data Packet>s that are carrying <Caption Distribution Packet> will have a DID value of 61h and a SDID value of 01h.
                         
-                        # Other data being carried in the ANC Frame Element
+                        # Other data being carried in the <ANC Frame Element>
                         
-                        The ANC Frame Element can also contain HANC Data Packets and other VANC Data Packets in addition to those carrying Caption Distribution Packets. Irrespective of what data is carried in the ANC Frame Element, there is only ever one Track (in each of the Material Package and Top-Level File Package), one Data Element, and one associated Essence Descriptor in the MXF file.
+                        The <ANC Frame Element> can also contain HANC Data Packets and other <VANC Data Packet>s in addition to those carrying <Caption Distribution Packet>s. Irrespective of what data is carried in the <ANC Frame Element>, there is only ever one <Track> (in each of the <Material Package> and Top-Level File Package), one Data Element, and one associated Essence Descriptor in the MXF file.
                         
 
 
