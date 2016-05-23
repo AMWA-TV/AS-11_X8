@@ -139,6 +139,26 @@ There are two special types of Block which allow the value of one Block to be se
             <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/note/014/>
             [A] Byte 15 of the Header Partition Pack Key must be set to 04h and all Header Metadata must have correct values. Hence 'Distinguished Values' cannot be used for 'Best Effort' properties. See Section 6.2.3 of SMPTE ST 377-1:2011 for a full explanation.
                 <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/note/014/artefacts/1.md>
+    [B] Drop Frame Timecode
+        Conformance: mandatory
+        <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/DFTC/>
+        [A] All <Timecode Component>s in all <Timecode Track>s have their "Drop Frame" property set to "True".
+            <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/DFTC/artefacts/1.md>
+            [T] Timecode Component
+                An MXF structure that stores <Timecode> information.
+                <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/term/Timecode%20Component/>
+                [T] Timecode
+                    An annotation of elapsed time along a <Track>.
+                    <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/term/Timecode/>
+                    [T] Track
+                        MXF data structure used to describe the content structure.
+                        <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/term/Track/>
+            [T] Timecode Track
+                An MXF <Track> that stores one or more <Timecode Component>s.
+                <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/term/Timecode%20Track/>
+                [T] Track
+                    MXF data structure used to describe the content structure.
+                    <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/term/Track/>
     [B] Header Metadata KLV Fill
         Conformance: recommended
         <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/KLVF_B/>

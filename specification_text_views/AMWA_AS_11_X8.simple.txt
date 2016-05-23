@@ -88,6 +88,9 @@ There are two special types of Block which allow the value of one Block to be se
         [A] The <Header Partition> is "Closed" and "Complete".
         [N] Implementation Notes
             [A] Byte 15 of the Header Partition Pack Key must be set to 04h and all Header Metadata must have correct values. Hence 'Distinguished Values' cannot be used for 'Best Effort' properties. See Section 6.2.3 of SMPTE ST 377-1:2011 for a full explanation.
+    [B] Drop Frame Timecode
+        Conformance: mandatory
+        [A] All <Timecode Component>s in all <Timecode Track>s have their "Drop Frame" property set to "True".
     [B] Header Metadata KLV Fill
         Conformance: recommended
         [A] When first created, the file includes a <KLV Fill> item of at least 4 MB in total length following the <Header Metadata>.
