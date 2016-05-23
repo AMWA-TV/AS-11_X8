@@ -118,6 +118,27 @@ There are two special types of Block which allow the value of one Block to be se
                     [T] Essence
                         A bitstream comprising picture, sound or data.
                         <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/term/Essence/>
+    [B] Closed Complete Header
+        Conformance: mandatory
+        <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/020/>
+        [A] The <Header Partition> is "Closed" and "Complete".
+            <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/020/artefacts/1.md>
+            [T] Header Partition
+                The first <Partition> in the MXF file. This <Partition> always contains a copy of the <Header Metadata>.
+                <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/term/Header%20Partition/>
+                [T] Partition
+                    A portion of the MXF file. An MXF file consists of a sequence of Partitions.
+                    <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/term/Partition/>
+                [T] Header Metadata
+                    MXF data structures that collectively describe the data in the <Essence> data in an MXF file.
+                    <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/term/Header%20Metadata/>
+                    [T] Essence
+                        A bitstream comprising picture, sound or data.
+                        <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/term/Essence/>
+        [N] Implementation Notes
+            <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/note/014/>
+            [A] Byte 15 of the Header Partition Pack Key must be set to 04h and all Header Metadata must have correct values. Hence 'Distinguished Values' cannot be used for 'Best Effort' properties. See Section 6.2.3 of SMPTE ST 377-1:2011 for a full explanation.
+                <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/note/014/artefacts/1.md>
     [B] Header Metadata KLV Fill
         Conformance: recommended
         <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/KLVF_B/>
