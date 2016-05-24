@@ -142,7 +142,7 @@ There are two special types of Block which allow the value of one Block to be se
     [B] Drop Frame Timecode
         Conformance: mandatory
         <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/DFTC/>
-        [A] All <Timecode Component>s in all <Timecode Track>s have their "Drop Frame" property set to "True".
+        [A] All <Timecode Component>s in the <Timecode Track> in the <Material Package> the have their "Drop Frame" property set to "True".
             <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/DFTC/artefacts/1.md>
             [T] Timecode Component
                 An MXF structure that stores <Timecode> information.
@@ -159,6 +159,9 @@ There are two special types of Block which allow the value of one Block to be se
                 [T] Track
                     MXF data structure used to describe the content structure.
                     <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/term/Track/>
+            [T] Material Package
+                An MXF data structure that describe an output timeline of the file.
+                <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/term/Material%20Package/>
     [B] Header Metadata KLV Fill
         Conformance: recommended
         <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/KLVF_B/>
