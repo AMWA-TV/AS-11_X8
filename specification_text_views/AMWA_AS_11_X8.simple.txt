@@ -88,9 +88,27 @@ There are two special types of Block which allow the value of one Block to be se
         [A] The <Header Partition> is "Closed" and "Complete".
         [N] Implementation Notes
             [A] Byte 15 of the Header Partition Pack Key must be set to 04h and all Header Metadata must have correct values. Hence 'Distinguished Values' cannot be used for 'Best Effort' properties. See Section 6.2.3 of SMPTE ST 377-1:2011 for a full explanation.
-    [B] Drop Frame Timecode
+    [B] Constrained Timecode Track in Material Package
         Conformance: mandatory
-        [A] All <Timecode Component>s in the <Timecode Track> in the <Material Package> the have their "Drop Frame" property set to "True".
+        [A] The <Timecode Track> in the <Material Package> is a <Constrained Timecode Track>.
+            [B] Constrained Timecode Track
+                [A] A <Constrained Timecode Track> is a <Timecode Track>.
+                [A] The value of the "Edit Rate" property of this <Timecode Track> is the same as the value of the "Edit Rate" property of the <Picture Track> in the same <Package>.
+                [A] There is exactly one <Timecode Component> in this <Timecode Track>.
+                [A] The value of the "Rounded Timecode Base" property of the <Timecode Component> is the "Edit Rate" of this <Timecode Track> rounded to the nearest integer.
+                [A] The value of the "Drop Frame" property of the <Timecode Component> is "False" except in any of the following scenarios (in which case it is "True"):
+                    
+                    * The "Rounded Timecode Base" property of the <Timecode Component> is `60` and the "Edit Rate" of this <Timecode Track> is mathematically equal to `60000/1001`
+                    * The "Rounded Timecode Base" property of the <Timecode Component> is `30` and the "Edit Rate" of this <Timecode Track> is mathematically equal to `30000/1001`
+                [N] Rational Numbers
+                    [A] Care must be taken when dealing with numbers expressed as a ratio of two integers ("rationals"). They are often used to represent temporal rates or image aspect ratios.
+                        
+                        When making comparisons of these values, it is insufficient to simply compare each of the numerators and each of the denominators. For example, `7/5` is mathematically equal to `14/10`.
+    [B] Timecode Track Precedence
+        Conformance: mandatory
+        [A] The <Timecode Track> in the <Material Package> defines the authoritative program timecode.
+        [N] Implementation Notes
+            [A] The authority of the Timecode Track in the Material Package needs to be respected by all components of a system that handles the file.
     [B] Header Metadata KLV Fill
         Conformance: recommended
         [A] When first created, the file includes a <KLV Fill> item of at least 4 MB in total length following the <Header Metadata>.
