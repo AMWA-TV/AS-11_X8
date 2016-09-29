@@ -1228,9 +1228,9 @@ There are two special types of Block which allow the value of one Block to be se
                 <URL: http://www.amwa.tv/projects/rules/01/note/E40/artefacts/1.md>
     [B] Embedded XML Documents
         Conformance: mandatory
-        <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/DM1/>
+        <URL: http://www.amwa.tv/projects/rules/01/block/DM1/>
         [A] An XML document defined by <XML DM for Programmes> is embedded in the file using <XML Document in Header Metadata Carriage>.
-            <URL: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/DM1/artefacts/1.md>
+            <URL: http://www.amwa.tv/projects/rules/01/block/DM1/artefacts/1.md>
             [B] XML DM for Programmes
                 <URL: http://www.amwa.tv/projects/rules/01/block/XML_DM_Programmes/>
                 [A] The namespace of the document's root element is <Programmes Descriptive Metadata>; the name of the document's root element is "Programmes_DM"; the Media type (MIME type) for the document is "application/xml"
