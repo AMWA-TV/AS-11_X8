@@ -164,38 +164,7 @@ An implementation complies with this Specification if it complies with the Compo
                             [A] http://www.amwa.tv/projects/rules/01/note/SoundChannelLabeling/artefacts/Labels.xml
                 [A] <MCA Labeling Present> is "true".
                 [A] <Default Audio Layout> is not set (no assumptions can be made about audio layout).
-        [A] If <Constrained Multichannel Audio Labeling Framework> is used then any device or system that reads, writes or otherwise processes the file supports <Multichannel Audio Labels Collection 0>.
-            [B] Constrained Multichannel Audio Labeling Framework
-                [A] The file uses the Multichannel Audio Labeling Framework specified in <SMPTE ST 377-4:2012>.
-                [A] There is exactly one <AudioChannelLabelSubDescriptor> for each <Audio Channel>. This <AudioChannelLabelSubDescriptor> is strongly referenced by the "SubDescriptors" property of the <Generic Sound Essence Descriptor> of the <Sound Track> that contains the <Audio Channel>.
-                [A] There is exactly one <SoundfieldGroupLabelSubDescriptor> for each <Soundfield Group>. This <SoundfieldGroupLabelSubDescriptor> is strongly referenced by the "SubDescriptors" property of the <Generic Sound Essence Descriptor> of a <Sound Track> in the <Soundfield Group>.
-                [A] There is one or more <GroupOfSoundfieldGroupsLabelSubDescriptor>(s) for each <Soundfield Group>. Each of these <GroupOfSoundfieldGroupsLabelSubDescriptor>s is strongly referenced by the "SubDescriptors" property of the <Generic Sound Essence Descriptor> of a <Sound Track> in the <Soundfield Group>.
-                [A] Each <AudioChannelLabelSubDescriptor> references exactly one <SoundfieldGroupLabelSubDescriptor>.
-                [A] Each <SoundfieldGroupLabelSubDescriptor> references all of the <GroupOfSoundfieldGroupsLabelSubDescriptor>(s) for the <Soundfield Group> it relates to.
-                [A] In each <AudioChannelLabelSubDescriptor> the following (ordinarily optional) properties are present: "MCA Tag Name", "MCA Channel ID".
-                [A] In each <AudioChannelLabelSubDescriptor> the following (ordinarily optional) properties are not present: "RFC 5646 Spoken Language".
-                [A] In each <SoundfieldGroupLabelSubDescriptor> the following (ordinarily optional) properties are present: "MCA Tag Name", "RFC 5646 Spoken Language".
-                [A] In each <SoundfieldGroupLabelSubDescriptor> the following (ordinarily optional) properties are not present: "MCA Channel ID".
-                [A] In each <GroupOfSoundfieldGroupsLabelSubDescriptor> the following (ordinarily optional) properties are present: "MCA Tag Name".
-                [A] In each <GroupOfSoundfieldGroupsLabelSubDescriptor> the following (ordinarily optional) properties are not present: "MCA Channel ID", "RFC 5646 Spoken Language".
-                [N] Implementation Notes
-                    [A] # Distribution and Repetition of SubDescriptors
-                        
-                        <SoundfieldGroupLabelSubDescriptor>s and <GroupOfSoundfieldGroupsLabelSubDescriptor>s could all be on one <Sound Track> or distributed. Hence, even the <GroupOfSoundfieldGroupsLabelSubDescriptor>s might not be on the same <Sound Track>.
-                        
-                        If several <Soundfield Group>s reference a single <Group of Soundfield Groups> then there will be more than one <GroupOfSoundfieldGroupsLabelSubDescriptor> for that <Group of Soundfield Groups>. That is, it is repeated for each <Soundfield Group> that references it.
-                        
-                        
-                        # Type of RFC5646SpokenLanguage property
-                        
-                        The value of this property is encoded as a US-ASCII string with one byte per character.
-                        
-                        Details:
-                        
-                        * The `RFC5646SpokenLanguage` property of the {MCALabelSubDescriptor} is defined in SMPTE ST 377-4:2012 as having the type "ISO-8String". This type is undefined.
-                        
-                        * However, the entry for `RFC5646SpokenLanguage` in the SMPTE Elements Register correctly lists the type as "ISO7", which refers to "ISO/IEC 646:1991, Information technology -- ISO 7-bit coded character set for information interchange.". That is the same character repertoire referenced by IETF RFC 5646.
-                        
+        [A] Any device or system that reads, writes or otherwise processes the file supports <Multichannel Audio Labels Collection 0>.
             [B] Multichannel Audio Labels Collection 0
                 [A] http://www.amwa.tv/projects/rules/01/block/MCAL_Labels_Set_0_r002/artefacts/Labels.xml
                 [A] <AudioChannelLabelSubDescriptor>s use the SMPTE Metadata Registers Entries listed here in accordance with this table.
