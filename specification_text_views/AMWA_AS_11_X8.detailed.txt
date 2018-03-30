@@ -1289,100 +1289,6 @@ An implementation complies with this Specification if it complies with the Compo
                 <Component ID: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/SpecID_L9/>
                 [A] Artefact copied to: ../specification_data_files/vm-1274-user.virt.ch.bbc.co.uk_c064c30/block/SpecID_L9/artefacts/Labels.xml
                     <Component ID: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/SpecID_L9/artefacts/Labels.xml>
-    [B] Dolby Audio Metadata
-        Conformance: optional
-        <Component ID: http://www.amwa.tv/projects/rules/01/block/DAM/>
-        [A] The <Dolby E Audio Metadata Serial Bitstream> that describes an <Audio Program> is included in the file using <Dolby E Audio Metadata Serial Bitstream Carriage>.
-            <Component ID: http://www.amwa.tv/projects/rules/01/block/DAM/artefacts/1.md>
-            [T] Dolby E Audio Metadata Serial Bitstream
-                A serial communication protocol that is used to transfer audio metadata between various products manufactured by Dolby.
-                <Component ID: http://www.amwa.tv/projects/rules/01/term/Dolby%20E%20Audio%20Metadata%20Serial%20Bitstream/>
-            [T] Audio Program
-                A collection of one or more audio channels.
-                <Component ID: http://www.amwa.tv/projects/rules/01/term/Audio%20Program/>
-            [B] Dolby E Audio Metadata Serial Bitstream Carriage
-                <Component ID: http://www.amwa.tv/projects/rules/01/block/400/>
-                [A] The mapping of a <Dolby E Audio Metadata Serial Bitstream> into <VANC Data Packet>s conforms to <SMPTE 2020-B>.
-                    <Component ID: http://www.amwa.tv/projects/rules/01/block/400/artefacts/401.md>
-                    [T] VANC Data Packet
-                        An ancillary data packet in the vertical ancillary data space (VANC).
-                        <Component ID: http://www.amwa.tv/projects/rules/01/term/VANC%20Data%20Packet/>
-                    [T] SMPTE 2020-B
-                        A method (sometimes known as "Method B") for mapping audio metadata into vertical ancillary data.
-                        <Component ID: http://www.amwa.tv/projects/rules/01/term/SMPTE%202020-B/>
-                [A] The mapping of <VANC Data Packet>s into <ANC Frame Element>s is as specified in <Constrained Ancillary Data Mapping>.
-                    <Component ID: http://www.amwa.tv/projects/rules/01/block/400/artefacts/402.md>
-                    [T] VANC Data Packet
-                        An ancillary data packet in the vertical ancillary data space (VANC).
-                        <Component ID: http://www.amwa.tv/projects/rules/01/term/VANC%20Data%20Packet/>
-                    [T] ANC Frame Element
-                        A KLV triplet containing one frame's worth of an <Essence Element> carrying ANC packets such as <VANC Data Packet>s.
-                        <Component ID: http://www.amwa.tv/projects/rules/01/term/ANC%20Frame%20Element/>
-                        [T] Essence Element
-                            The entire essence stream of a single <Track>.
-                            <Component ID: http://www.amwa.tv/projects/rules/01/term/Essence%20Element/>
-                            [T] Track
-                                MXF data structure used to describe the content structure.
-                                <Component ID: http://www.amwa.tv/projects/rules/01/term/Track/>
-                    [B] Constrained Ancillary Data Mapping
-                        <Component ID: http://www.amwa.tv/projects/rules/01/block/402/>
-                        [A] The mapping of <VANC Data Packet>s into <ANC Frame Element>s is as specified in <SMPTE ST 436-1:2013> where "Payload Sample Coding" is "8-bit luma samples" (04h) and "Wrapping Type" is: "VANC Frame" (01h) (for interlaced or segmented progressive <Picture Essence>) or "VANC Progressive Frame" (04h) (for full-frame progressive <Picture Essence>).
-                            <Component ID: http://www.amwa.tv/projects/rules/01/block/402/artefacts/402.md>
-                            [R] SMPTE ST 436-1:2013
-                                <Component ID: http://www.amwa.tv/projects/rules/01/external_reference_revision/SMPTE%20ST%20436-1-2013/>
-                            [T] Picture Essence
-                                A type of <Essence> containing predominantly picture data.
-                                <Component ID: http://www.amwa.tv/projects/rules/01/term/Picture%20Essence/>
-                                [T] Essence
-                                    A bitstream comprising picture, sound or data.
-                                    <Component ID: http://www.amwa.tv/projects/rules/01/term/Essence/>
-                [A] The "Line Number" used for each field's <VANC Data Packet> in the <ANC Frame Element> is the same for all <VANC Data Packet>s for that field for the identified <Audio Program>.
-                    <Component ID: http://www.amwa.tv/projects/rules/01/block/400/artefacts/403.md>
-                    [T] VANC Data Packet
-                        An ancillary data packet in the vertical ancillary data space (VANC).
-                        <Component ID: http://www.amwa.tv/projects/rules/01/term/VANC%20Data%20Packet/>
-                    [T] ANC Frame Element
-                        A KLV triplet containing one frame's worth of an <Essence Element> carrying ANC packets such as <VANC Data Packet>s.
-                        <Component ID: http://www.amwa.tv/projects/rules/01/term/ANC%20Frame%20Element/>
-                        [T] Essence Element
-                            The entire essence stream of a single <Track>.
-                            <Component ID: http://www.amwa.tv/projects/rules/01/term/Essence%20Element/>
-                            [T] Track
-                                MXF data structure used to describe the content structure.
-                                <Component ID: http://www.amwa.tv/projects/rules/01/term/Track/>
-                [N] Implementation Notes
-                    <Component ID: http://www.amwa.tv/projects/rules/01/note/E2/>
-                    [A] # Use of Dolby E Audio Metadata Serial Bitstream Carriage
-                        
-                        The file can use Dolby E Audio Metadata Serial Bitstream Carriage to carry audio presentation metadata for zero, one or more than one SoundfieldGroups / Audio Programs.
-                        
-                        # SDID value
-                        
-                        SMPTE ST 2020-1 specifies that the SDID value within the VANC Data Packet be used to identify the Sound Tracks that make up the Audio Program. For example, VANC Data Packets that contain Dolby E Audio Metadata Serial Bitstream for a 5.1 channel Audio Program starting at channel pair 5/6 will require the SDID value in the VANC Data Packet to be set to 04h.
-                        
-                        However, this approach only works inside an MXF file if every Audio Channel in the file is identifiable using a pan-file channel number. This is the case if, for example, the Sound Tracks in the MXF file are numbered mono Sound Tracks.
-                        
-                        However, if the Sound Tracks in the MXF file are Multichannel Sound Tracks then this approach does not work. Some consequences of this:
-                        
-                        * The value to be used for SDID is undefined.
-                        * If more than one 5.1 SoundfieldGroup (and at least one Dolby E Audio Metadata Serial Bitstream) is included in the file then an external mechanism is needed to relate SoundfieldGroups and Dolby E Audio Metadata Serial Bitstreams.
-                        * The SDID values might need to be rewritten upon output so that they correctly identify the Audio Channels that are being used to carry the relevant SoundfieldGroup / Audio Program. For example, this might be the case when playing out an MXF file to SDI -- particularly if only certain audio is played out or the audio layout is changed.
-                        
-                        # DID value
-                        
-                        VANC Data Packets that are carrying Dolby E Audio Metadata Serial Bitstream will have a DID value of 45h.
-                        
-                        # Packets are not constant throughout
-                        
-                        SMPTE 2020-B requires that there is "one packet in each field of interlaced video formats". However, the two packets in each interlaced video frame are not identical.
-                        
-                        The values of SMPTE RDD 6 metadata properties might change from one frame to the next, but normally they will not. However, the VANC Data Packets in the file will not be identical even if the metadata is static: the "frame_count" will certainly increment and the "description_text" (if not null) will change.
-                        
-                        # Other data being carried in the ANC Frame Element
-                        
-                        The ANC Frame Element can also contain HANC Data Packets and other VANC Data Packets in addition to those carrying Dolby E Audio Metadata Serial Bitstreams. Irrespective of what data is carried in the ANC Frame Element, there is only ever one Track (in each of the Material Package and Top-Level File Package), one Data Element, and one associated Essence Descriptor in the MXF file.
-                        
-                        <Component ID: http://www.amwa.tv/projects/rules/01/note/E2/artefacts/1.md>
     [B] Closed Captions
         Conformance: optional
         <Component ID: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/CC2/>
@@ -1432,12 +1338,11 @@ An implementation complies with this Specification if it complies with the Compo
                     <Component ID: http://vm-1274-user.virt.ch.bbc.co.uk/as/note/E62/>
                     [A] # DID and SDID values
                         
-                        <VANC Data Packet>s that are carrying <Caption Distribution Packet> will have a DID value of 61h and a SDID value of 01h.
+                        <VANC Data Packet>s that are carrying <Caption Distribution Packet>s will have a DID value of 61h and a SDID value of 01h.
                         
                         # Other data being carried in the <ANC Frame Element>
                         
                         The <ANC Frame Element> can also contain HANC Data Packets and other <VANC Data Packet>s in addition to those carrying <Caption Distribution Packet>s. Irrespective of what data is carried in the <ANC Frame Element>, there is only ever one <Track> (in each of the <Material Package> and Top-Level File Package), one Data Element, and one associated Essence Descriptor in the MXF file.
-                        
                         <Component ID: http://vm-1274-user.virt.ch.bbc.co.uk/as/note/E62/artefacts/1.md>
                         [T] VANC Data Packet
                             An ancillary data packet in the vertical ancillary data space (VANC).

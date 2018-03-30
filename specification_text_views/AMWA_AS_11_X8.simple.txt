@@ -311,46 +311,6 @@ An implementation complies with this Specification if it complies with the Compo
         [A] The value of this Element includes the Label <Blocks_FF_9>.
             [B] Blocks_FF_9
                 [A] Artefact copied to: ../specification_data_files/vm-1274-user.virt.ch.bbc.co.uk_c064c30/block/SpecID_L9/artefacts/Labels.xml
-    [B] Dolby Audio Metadata
-        Conformance: optional
-        [A] The <Dolby E Audio Metadata Serial Bitstream> that describes an <Audio Program> is included in the file using <Dolby E Audio Metadata Serial Bitstream Carriage>.
-            [B] Dolby E Audio Metadata Serial Bitstream Carriage
-                [A] The mapping of a <Dolby E Audio Metadata Serial Bitstream> into <VANC Data Packet>s conforms to <SMPTE 2020-B>.
-                [A] The mapping of <VANC Data Packet>s into <ANC Frame Element>s is as specified in <Constrained Ancillary Data Mapping>.
-                    [B] Constrained Ancillary Data Mapping
-                        [A] The mapping of <VANC Data Packet>s into <ANC Frame Element>s is as specified in <SMPTE ST 436-1:2013> where "Payload Sample Coding" is "8-bit luma samples" (04h) and "Wrapping Type" is: "VANC Frame" (01h) (for interlaced or segmented progressive <Picture Essence>) or "VANC Progressive Frame" (04h) (for full-frame progressive <Picture Essence>).
-                [A] The "Line Number" used for each field's <VANC Data Packet> in the <ANC Frame Element> is the same for all <VANC Data Packet>s for that field for the identified <Audio Program>.
-                [N] Implementation Notes
-                    [A] # Use of Dolby E Audio Metadata Serial Bitstream Carriage
-                        
-                        The file can use Dolby E Audio Metadata Serial Bitstream Carriage to carry audio presentation metadata for zero, one or more than one SoundfieldGroups / Audio Programs.
-                        
-                        # SDID value
-                        
-                        SMPTE ST 2020-1 specifies that the SDID value within the VANC Data Packet be used to identify the Sound Tracks that make up the Audio Program. For example, VANC Data Packets that contain Dolby E Audio Metadata Serial Bitstream for a 5.1 channel Audio Program starting at channel pair 5/6 will require the SDID value in the VANC Data Packet to be set to 04h.
-                        
-                        However, this approach only works inside an MXF file if every Audio Channel in the file is identifiable using a pan-file channel number. This is the case if, for example, the Sound Tracks in the MXF file are numbered mono Sound Tracks.
-                        
-                        However, if the Sound Tracks in the MXF file are Multichannel Sound Tracks then this approach does not work. Some consequences of this:
-                        
-                        * The value to be used for SDID is undefined.
-                        * If more than one 5.1 SoundfieldGroup (and at least one Dolby E Audio Metadata Serial Bitstream) is included in the file then an external mechanism is needed to relate SoundfieldGroups and Dolby E Audio Metadata Serial Bitstreams.
-                        * The SDID values might need to be rewritten upon output so that they correctly identify the Audio Channels that are being used to carry the relevant SoundfieldGroup / Audio Program. For example, this might be the case when playing out an MXF file to SDI -- particularly if only certain audio is played out or the audio layout is changed.
-                        
-                        # DID value
-                        
-                        VANC Data Packets that are carrying Dolby E Audio Metadata Serial Bitstream will have a DID value of 45h.
-                        
-                        # Packets are not constant throughout
-                        
-                        SMPTE 2020-B requires that there is "one packet in each field of interlaced video formats". However, the two packets in each interlaced video frame are not identical.
-                        
-                        The values of SMPTE RDD 6 metadata properties might change from one frame to the next, but normally they will not. However, the VANC Data Packets in the file will not be identical even if the metadata is static: the "frame_count" will certainly increment and the "description_text" (if not null) will change.
-                        
-                        # Other data being carried in the ANC Frame Element
-                        
-                        The ANC Frame Element can also contain HANC Data Packets and other VANC Data Packets in addition to those carrying Dolby E Audio Metadata Serial Bitstreams. Irrespective of what data is carried in the ANC Frame Element, there is only ever one Track (in each of the Material Package and Top-Level File Package), one Data Element, and one associated Essence Descriptor in the MXF file.
-                        
     [B] Closed Captions
         Conformance: optional
         [A] <Caption Distribution Packet>s are included in the file using <Closed Captions Carriage>.
@@ -362,12 +322,11 @@ An implementation complies with this Specification if it complies with the Compo
                 [N] Implementation Notes
                     [A] # DID and SDID values
                         
-                        <VANC Data Packet>s that are carrying <Caption Distribution Packet> will have a DID value of 61h and a SDID value of 01h.
+                        <VANC Data Packet>s that are carrying <Caption Distribution Packet>s will have a DID value of 61h and a SDID value of 01h.
                         
                         # Other data being carried in the <ANC Frame Element>
                         
                         The <ANC Frame Element> can also contain HANC Data Packets and other <VANC Data Packet>s in addition to those carrying <Caption Distribution Packet>s. Irrespective of what data is carried in the <ANC Frame Element>, there is only ever one <Track> (in each of the <Material Package> and Top-Level File Package), one Data Element, and one associated Essence Descriptor in the MXF file.
-                        
 
 
 
