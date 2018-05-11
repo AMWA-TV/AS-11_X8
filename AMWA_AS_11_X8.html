@@ -265,28 +265,6 @@
 <tbody>
 <tr>
 <td>Option 1a</td>
-<td>HD420</td>
-<td>MP@HL</td>
-<td>35 Mbit/s</td>
-<td>1280x720</td>
-<td>59.94</td>
-<td>Progressive</td>
-<td>4:2:0</td>
-<td>16-bit</td>
-</tr>
-<tr>
-<td>Option 1b</td>
-<td>HD420</td>
-<td>MP@HL</td>
-<td>35 Mbit/s</td>
-<td>1920x1080</td>
-<td>29.97</td>
-<td>Interlaced</td>
-<td>4:2:0</td>
-<td>16-bit</td>
-</tr>
-<tr>
-<td>Option 2a</td>
 <td>HD422</td>
 <td>4:2:2P@HL</td>
 <td>50 Mbit/s</td>
@@ -297,7 +275,7 @@
 <td>24-bit</td>
 </tr>
 <tr>
-<td>Option 2b</td>
+<td>Option 1b</td>
 <td>HD422</td>
 <td>4:2:2P@HL</td>
 <td>50 Mbit/s</td>
@@ -316,6 +294,11 @@
 <p>There are any number of <a class='' data-toggle='tooltip' href='#22dd147bbc7edf9dc85ffd2e7f560ab3' title='A distinct collection of sequenced audio samples that are intended for delivery to a single loudspeaker or other reproduction device.'>Audio Channel</a>s in the file up to a maximum of 16.</p>
                             </div>
                         </li>
+                        <li data-jstree='{"icon":"include/artefact.png"}' id='3dbe2e30c9edf25d7d1b7680c77da4c2'>
+                            <div class='content_container clearfix'>
+<p>The <a class='' data-toggle='tooltip' href='#9873d3f32c3504c837a3e52101a4841d' title='A part of an MXF file that carries one or more &lt;Essence&gt; streams.'>Essence Container</a> is segmented into <a class='' data-toggle='tooltip' href='#bb30298ea161fa662a2f8aa4cb9bbfea' title='A portion of the MXF file. An MXF file consists of a sequence of Partitions.'>Partition</a>s and indexed according to the basic Segmented Body Partition Style (section 8.2.1, but not 8.2.1.1 or 8.2.1.2, of <a class='' data-toggle='tooltip' href='#e2c3626587ac55170e600216d89ba54a' title='MXF Interoperability Specification of Sony MPEG Long GOP Products'>SMPTE RDD 9:2013</a>).</p>
+                            </div>
+                        </li>
                         <li data-jstree='{"icon":"include/note.png"}' id='6c47a9cdd054d95881e6906493c449d3'>
                             <div class='content_container clearfix'>
 <b>Variation from RDD 9</b>
@@ -331,9 +314,7 @@
                             </li>
                             <li data-jstree='{"icon":"include/noteartefact.png"}' id='dc11ea80e212ca5a558cc250639d032b'>
                                 <div class='content_container clearfix'>
-<p><a class='' data-toggle='tooltip' href='#e2c3626587ac55170e600216d89ba54a' title='MXF Interoperability Specification of Sony MPEG Long GOP Products'>SMPTE RDD 9:2013</a> includes all of the components of the configurations in the table here, but not necessarily in these combinations. Option 1b is not specified in <a class='' data-toggle='tooltip' href='#e2c3626587ac55170e600216d89ba54a' title='MXF Interoperability Specification of Sony MPEG Long GOP Products'>SMPTE RDD 9:2013</a>, but all of its constituent parts are. </p>
-
-<p>To be strictly conformant to <a class='' data-toggle='tooltip' href='#e2c3626587ac55170e600216d89ba54a' title='MXF Interoperability Specification of Sony MPEG Long GOP Products'>SMPTE RDD 9:2013</a>, files must have 2, 4 or 8 <a class='' data-toggle='tooltip' href='#22dd147bbc7edf9dc85ffd2e7f560ab3' title='A distinct collection of sequenced audio samples that are intended for delivery to a single loudspeaker or other reproduction device.'>Audio Channel</a>s (which is allowed is dependent on which category of <a class='' data-toggle='tooltip' href='#6d9c72436cb98e9faee73f2656efa7bb' title='A type of &lt;Essence&gt; containing predominantly picture data.'>Picture Essence</a> is used).</p>
+<p>To be strictly conformant to <a class='' data-toggle='tooltip' href='#e2c3626587ac55170e600216d89ba54a' title='MXF Interoperability Specification of Sony MPEG Long GOP Products'>SMPTE RDD 9:2013</a>, files must have 8 <a class='' data-toggle='tooltip' href='#22dd147bbc7edf9dc85ffd2e7f560ab3' title='A distinct collection of sequenced audio samples that are intended for delivery to a single loudspeaker or other reproduction device.'>Audio Channel</a>s.</p>
                                 </div>
                             </li>
                             </ul>
@@ -2185,6 +2166,21 @@
 
                              
                         <div class='info tInfo'><b>ID: </b><a class='' data-toggle='tooltip' href='#component-id-message' title='ID (identity) of this Rules-based Specification Component: Click to read an explanation'>http://www.amwa.tv/projects/rules/01/term/Essence/</a></div>
+                        
+                            <div class='info tInfo_permanent'><b>Defined By: </b><a class='' data-toggle='tooltip' href='#2ac1cb7a194dfe7fe8269a9760dcd495' title='Material Exchange Format (MXF) — File Format Specification'>SMPTE ST 377-1</a></div>
+                        
+                    
+                    </td></tr>
+                
+
+                    
+
+                    <tr id='9873d3f32c3504c837a3e52101a4841d'>
+                    <td><b>Essence Container</b></td>
+                    <td><p>A part of an MXF file that carries one or more <a class='' data-toggle='tooltip' href='#a2db301d86a5b89829270ea4b6909413' title='A bitstream comprising picture, sound or data.'>Essence</a> streams.</p>
+
+                             
+                        <div class='info tInfo'><b>ID: </b><a class='' data-toggle='tooltip' href='#component-id-message' title='ID (identity) of this Rules-based Specification Component: Click to read an explanation'>http://www.amwa.tv/projects/rules/01/term/Essence%20Container/</a></div>
                         
                             <div class='info tInfo_permanent'><b>Defined By: </b><a class='' data-toggle='tooltip' href='#2ac1cb7a194dfe7fe8269a9760dcd495' title='Material Exchange Format (MXF) — File Format Specification'>SMPTE ST 377-1</a></div>
                         

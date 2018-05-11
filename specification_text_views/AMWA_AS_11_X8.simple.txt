@@ -71,16 +71,12 @@ An implementation complies with this Specification if it complies with the Compo
             
              Configuration Name | RDD 9 "categorization" | MPEG-2 Profile & Level | MPEG-2 bit rate | Video frame dimensions | Video frame rate | Progressive or Interlaced | Color Subsampling | Audio sample quantisation
              -------------------|------------------------|------------------------|-----------------|------------------------|------------------|---------------------------|-------------------|--------------------------
-             Option 1a          | HD420                  | MP@HL                  | 35 Mbit/s       | 1280x720               | 59.94            | Progressive               | 4:2:0             | 16-bit
-             Option 1b          | HD420                  | MP@HL                  | 35 Mbit/s       | 1920x1080              | 29.97            | Interlaced                | 4:2:0             | 16-bit
-             Option 2a          | HD422                  | 4:2:2P@HL              | 50 Mbit/s       | 1280x720               | 59.94            | Progressive               | 4:2:2             | 24-bit
-             Option 2b          | HD422                  | 4:2:2P@HL              | 50 Mbit/s       | 1920x1080              | 29.97            | Interlaced                | 4:2:2             | 24-bit
+             Option 1a          | HD422                  | 4:2:2P@HL              | 50 Mbit/s       | 1280x720               | 59.94            | Progressive               | 4:2:2             | 24-bit
+             Option 1b          | HD422                  | 4:2:2P@HL              | 50 Mbit/s       | 1920x1080              | 29.97            | Interlaced                | 4:2:2             | 24-bit
         [A] There are any number of <Audio Channel>s in the file up to a maximum of 16.
+        [A] The <Essence Container> is segmented into <Partition>s and indexed according to the basic Segmented Body Partition Style (section 8.2.1, but not 8.2.1.1 or 8.2.1.2, of <SMPTE RDD 9:2013>).
         [N] Variation from RDD 9
-            [A] <SMPTE RDD 9:2013> includes all of the components of the configurations in the table here, but not necessarily in these combinations. Option 1b is not specified in <SMPTE RDD 9:2013>, but all of its constituent parts are. 
-                
-                To be strictly conformant to <SMPTE RDD 9:2013>, files must have 2, 4 or 8 <Audio Channel>s (which is allowed is dependent on which category of <Picture Essence> is used).
-                
+            [A] To be strictly conformant to <SMPTE RDD 9:2013>, files must have 8 <Audio Channel>s.
     [B] Closed Complete Header
         Conformance: mandatory
         [A] The <Header Partition> is "Closed" and "Complete".
