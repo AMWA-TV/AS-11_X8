@@ -1330,10 +1330,8 @@ An implementation complies with this Specification if it complies with the Compo
         [A] <Caption Distribution Packet>s are included in the file using <Closed Captions Carriage>.
             <Component ID: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/CC2/artefacts/1.md>
             [T] Caption Distribution Packet
-                A data format designed to carry (among other things) the captions data defined by <CTA-708-E>.
-                <Component ID: http://www.amwa.tv/projects/rules/01/term/Caption%20Distribution%20Packet/>
-                [R] CTA-708-E
-                    <Component ID: http://www.amwa.tv/projects/rules/01/external_reference_revision/CTA-708-E/>
+                A data format designed to carry (among other things) the captions data defined by <CTA-708>.
+                <Component ID: http://www.amwa.tv/projects/rules/01/term/Caption%20Distribution%20Packet_r001/>
             [B] Closed Captions Carriage
                 <Component ID: http://vm-1274-user.virt.ch.bbc.co.uk/as/block/CCC/>
                 [A] The mapping of <Caption Distribution Packet>s into <VANC Data Packet>s conforms to <SMPTE ST 334-1:2015>.
@@ -1370,7 +1368,7 @@ An implementation complies with this Specification if it complies with the Compo
                                     A bitstream comprising picture, sound or data.
                                     <Component ID: http://www.amwa.tv/projects/rules/01/term/Essence/>
                 [N] Implementation Notes
-                    <Component ID: http://www.amwa.tv/projects/rules/01/note/E62/>
+                    <Component ID: http://www.amwa.tv/projects/rules/01/note/E62_r001/>
                     [A] # DID and SDID values
                         
                         <VANC Data Packet>s that are carrying <Caption Distribution Packet>s will have a DID value of 61h and a SDID value of 01h.
@@ -1378,7 +1376,7 @@ An implementation complies with this Specification if it complies with the Compo
                         # Other data being carried in the <ANC Frame Element>
                         
                         The <ANC Frame Element> can also contain HANC Data Packets and other <VANC Data Packet>s in addition to those carrying <Caption Distribution Packet>s. Irrespective of what data is carried in the <ANC Frame Element>, there is only ever one <Track> (in each of the <Material Package> and Top-Level File Package), one Data Element, and one associated Essence Descriptor in the MXF file.
-                        <Component ID: http://www.amwa.tv/projects/rules/01/note/E62/artefacts/1.md>
+                        <Component ID: http://www.amwa.tv/projects/rules/01/note/E62_r001/artefacts/1.md>
                         [T] VANC Data Packet
                             An ancillary data packet in the vertical ancillary data space (VANC).
                             <Component ID: http://www.amwa.tv/projects/rules/01/term/VANC%20Data%20Packet/>
