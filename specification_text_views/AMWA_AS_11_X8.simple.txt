@@ -171,7 +171,7 @@ An implementation complies with this Specification if it complies with the Compo
                 [A] <Default Audio Layout> is not set (no assumptions can be made about audio layout).
         [A] Any device or system that reads, writes or otherwise processes the file supports <Multichannel Audio Labels Collection 0>.
             [B] Multichannel Audio Labels Collection 0
-                [A] Artefact copied to: ../specification_data_files/www.amwa.tv_c0f7b64/block/MCAL_Labels_Set_0_r002/artefacts/Labels.xml
+                [A] Artefact copied to: ../specification_data_files/www.amwa.tv_c0f7b64/block/MCAL_Labels_Set_0_r003/artefacts/Labels.xml
                 [A] <AudioChannelLabelSubDescriptor>s use the SMPTE Metadata Registers Entries listed here in accordance with this table.
                     
                      SMPTE Metadata Registers Symbol           | MCA Tag Name                  | MCA Tag Symbol
@@ -184,6 +184,8 @@ An implementation complies with this Specification if it complies with the Compo
                      `LeftSurroundAudioChannel`                | Left Surround                 | `chLs`
                      `RightSurroundAudioChannel`               | Right Surround                | `chRs`
                      `VisuallyImpairedNarrativeAudioChannel`   | Visually Impaired Narrative   | `chVIN`
+                    
+                    __⚠__ The MCA Tag Name "Visually Impaired-Narrative" (with a hyphen) is used elsewhere, such as in IMF and D-Cinema.
                 [A] <SoundfieldGroupLabelSubDescriptor>s use the SMPTE Metadata Registers Entries listed here in accordance with this table.
                     
                      SMPTE Metadata Registers Symbol           | MCA Tag Name      | MCA Tag Symbol | Constituent Audio Channels (in no particular order)
