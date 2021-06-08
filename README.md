@@ -1,4 +1,4 @@
-# **[Work In Progress]** AS-11 X8 (MXF Program Contribution - NABA DPP HD (MPEG-2))
+# **[Archived]** AS-11 X8 (MXF Program Contribution - NABA DPP HD (MPEG-2))
 
 ### **View the latest version of this Specification online [here](https://amwa-tv.github.io/AS-11_X8/AMWA_AS_11_X8.html)**.
 
